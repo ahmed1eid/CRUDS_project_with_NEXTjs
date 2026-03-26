@@ -1,0 +1,45 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en: {
+        translation: {
+          title: "Site Data Manager",
+          subtitle: "[Full Dev] - Organized Delivery",
+          addNew: "Add New Record",
+          nameLabel: "Name",
+          categoryLabel: "Category",
+          addButton: "Add",
+          idCol: "UUID (Prefix)",
+          nameCol: "Name",
+          catCol: "Category",
+          noData: "No data available",
+          switchLang: "العربية"
+        }
+      },
+      ar: {
+        translation: {
+          title: "مدير بيانات الموقع",
+          subtitle: "[تطوير متكامل] - تسليم منظم",
+          addNew: "إضافة بيان جديد",
+          nameLabel: "الاسم",
+          categoryLabel: "الفئة",
+          addButton: "إضافة",
+          idCol: "المعرف (UUID)",
+          nameCol: "الاسم",
+          catCol: "الفئة",
+          noData: "لا توجد بيانات حالياً",
+          switchLang: "English"
+        }
+      }
+    },
+    fallbackLng: 'ar',
+    interpolation: { escapeValue: false }
+  });
+
+export default i18n;
